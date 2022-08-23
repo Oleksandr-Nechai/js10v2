@@ -6,7 +6,11 @@ export default class ApiCountryService {
      this.nameContry=""
     }
 
-    fetchCountries () {return fetch (`${BASE_URL}${this.nameContry}?fields=name,capital,population,flags,languages`).then(response=>response.json())}
+    fetchCountries () {return fetch (`${BASE_URL}${this.nameContry}?fields=name,capital,population,flags,languages`).
+    then(response=>{if (response.status === 404) {
+        return Promise.reject(new Error());
+      }
+    return response.json()})}
 
     get name () {
         return this.nameContry
@@ -14,5 +18,7 @@ export default class ApiCountryService {
      
     set name (newName) {
         this.nameContry = newName
+       
     }
+        
 }

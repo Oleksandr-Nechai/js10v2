@@ -1,0 +1,16 @@
+body{
+    margin: 30px;
+}
+
+li {
+    list-style:none
+}
+ ul{
+    margin: 0;
+    padding: 0;
+ }
+
+ @mixin flags($width) {
+    display: block;
+    width: $width;
+}

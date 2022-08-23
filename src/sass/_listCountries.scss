@@ -1,0 +1,18 @@
+
+
+.country-item {
+display:flex;
+gap:20px;
+margin-bottom:20px;
+
+}
+
+.country-flags{
+   @include flags(100px)
+}
+
+.country-name{
+    font-weight:500;
+    margin:0;
+    align-self:flex-end;
+}
