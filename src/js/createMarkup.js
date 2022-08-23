@@ -68,6 +68,7 @@ export default class CreateMarkup {
 
         }
 
+        
     get data () {
         return this.dataArray
     };
