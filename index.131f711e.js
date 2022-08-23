@@ -1,2 +1,0 @@
-const t={form:document.querySelector(".jsForm")},e=new class{fetchCountries(){return fetch(`https://restcountries.com/v3.1/name/${this.nameContry}?fields=name,capital,population,flags,languages`).then((t=>t.json()))}get name(){return this.nameContry}set name(t){this.nameContry=t}constructor(){this.nameContry=""}};t.form.addEventListener("input",(function(t){e.name=t.currentTarget.country.value,e.fetchCountries().then(console.log).catch((t=>console.log(`${t} !!!fff`)))}));
-//# sourceMappingURL=index.131f711e.js.map
